@@ -5,13 +5,14 @@ import { GrCloudSoftware } from 'react-icons/gr';
 import { FaLaptopHouse, FaMailBulk } from 'react-icons/fa';
 import { BsFillHouseGearFill } from 'react-icons/bs';
 import { FaUsersGear } from 'react-icons/fa6';
+import logo from '/dscsc.png';
 
 const Menu = () => {
     return (
         <div>
             <div className='flex justify-center items-center my-3'>
                 <div className='h-16 w-16'>
-                    <img src="./dscsc.png" className='w-full h-full' alt="" />
+                    <img src={logo} className='w-full h-full' alt="" />
                 </div>
             </div>
             <ul className="menu w-full grow *:m-2 text-white">
