@@ -12,7 +12,12 @@ import { BiEditAlt, BiLogOutCircle } from 'react-icons/bi';
 
 function App() {
 
-  const [user] = useContext(AuthContext);
+  const user = [
+    {
+      name: "John Doe",
+      role: "Admin"
+    }
+  ];
 
   const notify = () => toast('Wow so easy !');
 

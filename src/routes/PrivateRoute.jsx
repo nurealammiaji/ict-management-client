@@ -4,7 +4,12 @@ import { AuthContext } from "../providers/AuthProvider";
 
 const PrivateRoute = ({ children }) => {
 
-    const [user] = useContext(AuthContext);
+      const user = [
+    {
+      name: "John Doe",
+      role: "Admin"
+    }
+  ];
 
     if (user && user.role === "admin") {
         return children;

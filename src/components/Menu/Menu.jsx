@@ -6,12 +6,16 @@ import { FaLaptopHouse, FaMailBulk } from 'react-icons/fa';
 import { BsFillHouseGearFill } from 'react-icons/bs';
 import { FaUsersGear } from 'react-icons/fa6';
 import logo from '/dscsc.png';
-import { useContext } from 'react';
-import { AuthContext } from '../../providers/AuthProvider';
+
 
 const Menu = () => {
 
-    const [user] = useContext(AuthContext);
+      const user = [
+    {
+      name: "John Doe",
+      role: "Admin"
+    }
+  ];
 
     return (
         <div>
