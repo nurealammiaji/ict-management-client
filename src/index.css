@@ -19,7 +19,7 @@
   --mono: ui-monospace, Consolas, monospace; */
 
   /* font: 18px/145% var(--sans); */
-  font: 18px/145% rubik, system-ui, 'Segoe UI', Roboto, sans-serif;
+  font: 16px/145% poppins, system-ui, 'Segoe UI', Roboto, sans-serif;
   letter-spacing: 0.18px;
   color-scheme: light dark;
   color: var(--text);

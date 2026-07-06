@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Home from "../pages/Home/Home";
 import App from "../App";
+import PrivateRoute from "./PrivateRoute";
 
 const AllRoutes = createBrowserRouter([
     {
@@ -21,7 +22,7 @@ const AllRoutes = createBrowserRouter([
             },
             {
                 path: "/internet",
-                element: <div>Internet</div>
+                element: <PrivateRoute><div>Internet</div></PrivateRoute>
             },
             {
                 path: "/software",
@@ -34,8 +35,16 @@ const AllRoutes = createBrowserRouter([
             {
                 path: "/settings",
                 element: <div>Settings</div>
+            },
+            {
+                path: "/search",
+                element: <div>Search</div>
             }
         ]
+    },
+    {
+        path: "/login",
+        element: <div>Login</div>
     }
 ])
 
