@@ -8,7 +8,7 @@ import Register from "../pages/Register/Register";
 const AllRoutes = createBrowserRouter([
     {
         path: "/",
-        element: <App />,
+        element: <PrivateRoute><App /></PrivateRoute>,
         children: [
             {
                 path: "/",
@@ -24,7 +24,7 @@ const AllRoutes = createBrowserRouter([
             },
             {
                 path: "/internet",
-                element: <PrivateRoute><div>Internet</div></PrivateRoute>
+                element: <div>Internet</div>
             },
             {
                 path: "/software",

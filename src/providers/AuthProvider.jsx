@@ -26,6 +26,7 @@ const AuthProvider = ({ children }) => {
     }
 
     const userLogin = async (username, password) => {
+        console.log(username, password)
         setLoading(true);
         return await axiosPublic.post('/auth/login', { username, password })
     };
@@ -47,6 +48,7 @@ const AuthProvider = ({ children }) => {
                     .then((res) => {
                         const currentUser = res.data;
                         if (currentUser) {
+                            console.log(currentUser);
                             setUser(currentUser);
                             localStorage.setItem("userInfo", JSON.stringify(currentUser));
                         }

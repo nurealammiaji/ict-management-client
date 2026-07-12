@@ -4,6 +4,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import LoginForm from '../../components/LoginForm/LoginForm';
 import { AuthContext } from '../../providers/AuthProvider';
+import bg from '/bg.png';
 
 const Login = () => {
 
@@ -27,12 +28,22 @@ const Login = () => {
     }, [location, navigate, user, destination]);
 
     return (
-        <div>
-            <br /><br /><br /><br />
+        <div className=''>
+            {/* <br /><br /><br /><br /> */}
             <HelmetAsync title={"Login"} />
             <LoginForm />
-            <br /><br />
+            {/* <br /><br /> */}
         </div>
+
+        // <div className="bg-fixed bg-cover min-h-screen" style={{ backgroundImage: `url(${bg})` }}>
+        //     <div className="absolute inset-0 bg-black/50"></div>
+        //     <div className='relative z-10 h-full'>
+        //         <br /><br /><br /><br />
+        //         <HelmetAsync title={"Login"} />
+        //         <LoginForm />
+        //         <br /><br />
+        //     </div>
+        // </div>
     );
 };
 
