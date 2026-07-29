@@ -12,7 +12,7 @@ import { BiEditAlt, BiLogOutCircle } from 'react-icons/bi';
 
 function App() {
 
-  const {user, logout} = useContext(AuthContext);
+  const { user, logout } = useContext(AuthContext);
 
   const notify = () => toast('Wow so easy !');
 
@@ -68,15 +68,15 @@ function App() {
                       <ul className="min-w-40 dropdown dropdown-end menu bg-[#454B2C] text-white font-bold border border-[#2F341A] rounded-box" popover="auto" id="popover-1" style={{ positionAnchor: "--anchor-1" } /* as React.CSSProperties */}>
                         {
                           (user) ?
-                          <div className="flex flex-col items-center">
-                            <h3 className=""><span className='text-sm'>{user.name}</span></h3>
-                            <small className="font-light">{user.role}</small>
-                          </div> : ''
+                            <div className="flex flex-col items-center">
+                              <h3 className=""><span className='text-sm'>{user.name}</span></h3>
+                              <small className="font-light">{user.role}</small>
+                            </div> : ''
                         }
                         <hr className="border-[#2F341A] w-full mt-3 mb-2" />
                         <li><Link to={"/profile/edit"} className="flex font-normal items-center hover:bg-[#2F341A]"><span className='mr-2'><BiEditAlt className='text-lg' /></span> Edit Profile</Link></li>
                         <li><Link to={"/profile/view"} className="flex items-center font-normal hover:bg-[#2F341A]"><span className='mr-2'><SlEye className='text-lg' /></span>View Profile</Link></li>
-                       <li><button className="hover:bg-[#2F341A] font-normal flex items-center" onClick={() => handleLogout()}><span className='mr-2'><BiLogOutCircle className='text-lg' /></span> Logout</button></li>
+                        <li><button className="hover:bg-[#2F341A] font-normal flex items-center" onClick={() => handleLogout()}><span className='mr-2'><BiLogOutCircle className='text-lg' /></span> Logout</button></li>
                       </ul>
                     </div> : ''
                 }
@@ -84,8 +84,9 @@ function App() {
             </div>
           </nav>
           {/* Page content here */}
-          <div className="bg-fixed bg-cover min-h-screen" style={{ backgroundImage: `url(${bg})` }}>
-            <div className="absolute inset-0 bg-black/50"></div>
+          {/* <div className="bg-fixed bg-cover min-h-screen" style={{ backgroundImage: `url(${bg})` }}> */}
+          <div className="min-h-screen bg-base-300">
+            {/* <div className="absolute inset-0 bg-black/50"></div> */}
             <div className='relative z-10 h-full'>
               <Outlet />
             </div>

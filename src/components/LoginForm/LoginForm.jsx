@@ -967,7 +967,7 @@ const LoginForm = () => {
 
                             {/* ================= Register ================= */}
 
-                            <div className="text-center pt-4">
+                            {/* <div className="text-center pt-4">
 
                                 <span className="text-sm text-gray-500">
                                     New here?
@@ -980,7 +980,7 @@ const LoginForm = () => {
                                     Create Account
                                 </Link>
 
-                            </div>
+                            </div> */}
 
                             {/* ================= Footer ================= */}
 

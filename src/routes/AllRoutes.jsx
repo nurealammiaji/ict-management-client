@@ -4,6 +4,7 @@ import App from "../App";
 import PrivateRoute from "./PrivateRoute";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
+import Clerk from "../pages/Clerk/Clerk";
 
 const AllRoutes = createBrowserRouter([
     {
@@ -16,7 +17,7 @@ const AllRoutes = createBrowserRouter([
             },
             {
                 path: "/clerk",
-                element: <div>Clerk</div>
+                element: <Clerk />
             },
             {
                 path: "/ictlab",

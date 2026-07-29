@@ -6,16 +6,16 @@ import { FaLaptopHouse, FaMailBulk } from 'react-icons/fa';
 import { BsFillHouseGearFill } from 'react-icons/bs';
 import { FaUsersGear } from 'react-icons/fa6';
 import logo from '/dscsc.png';
+import { useContext } from 'react';
+import { AuthContext } from '../../providers/AuthProvider';
 
 
 const Menu = () => {
 
-      const user = [
-    {
-      name: "John Doe",
-      role: "Admin"
-    }
-  ];
+    const { user } = useContext(AuthContext);
+
+    //   bg-[#C9E68A]
+    // bg-[#7C884C]
 
     return (
         <div>
@@ -28,7 +28,7 @@ const Menu = () => {
                 <br />
                 {/* List item First */}
                 <li>
-                    <NavLink to={"/"} className={({ isActive }) => isActive ? 'bg-[#C9E68A] border-[#C9E68A] text-[#2F341A]' : `is-drawer-close:tooltip is-drawer-close:tooltip-right`} data-tip="Home">
+                    <NavLink to={"/"} className={({ isActive }) => isActive ? 'bg-[#7C884C] border-[#7C884C] text-[#2F341A] glass' : `is-drawer-close:tooltip is-drawer-close:tooltip-right`} data-tip="Home">
                         <LuHouse className='text-4xl' />
                         <span className="ml-2 is-drawer-close:hidden text-lg font-semibold">Home</span>
                     </NavLink>
@@ -36,7 +36,7 @@ const Menu = () => {
 
                 {/* List item 1 */}
                 <li>
-                    <NavLink to={"/ictlab"} className={({ isActive }) => isActive ? 'bg-[#C9E68A] border-[#C9E68A] text-[#2F341A]' : `is-drawer-close:tooltip is-drawer-close:tooltip-right`} data-tip="ICT Lab">
+                    <NavLink to={"/ictlab"} className={({ isActive }) => isActive ? 'bg-[#7C884C] border-[#7C884C] text-[#2F341A] glass' : `is-drawer-close:tooltip is-drawer-close:tooltip-right`} data-tip="ICT Lab">
                         {/* <MdEngineering className='text-4xl' /> */}
                         {/* <BsFillHouseGearFill className='text-4xl' /> */}
                         <FaUsersGear className='text-4xl' />
@@ -46,31 +46,31 @@ const Menu = () => {
 
                 {/* List item 2 */}
                 <li>
-                    <NavLink to={"/clerk"} className={({ isActive }) => isActive ? 'bg-[#C9E68A] border-[#C9E68A] text-[#2F341A]' : `is-drawer-close:tooltip is-drawer-close:tooltip-right`} data-tip="ICT Clerk">
+                    <NavLink to={"/clerk"} className={({ isActive }) => isActive ? 'bg-[#7C884C] border-[#7C884C] text-[#2F341A] glass' : `is-drawer-close:tooltip is-drawer-close:tooltip-right`} data-tip="ICT Clerk">
                         <MdOutlineContactMail className='text-4xl' />
-                        <span className="ml-2 is-drawer-close:hidden text-lg font-semibold">Clerk Sec</span>
+                        <span className="ml-2 is-drawer-close:hidden text-lg font-semibold">ICT Clerk</span>
                     </NavLink>
                 </li>
 
                 {/* List item 3 */}
                 <li>
-                    <NavLink to={"/ictstore"} className={({ isActive }) => isActive ? 'bg-[#C9E68A] border-[#C9E68A] text-[#2F341A]' : `is-drawer-close:tooltip is-drawer-close:tooltip-right`} data-tip="ICT Store">
+                    <NavLink to={"/ictstore"} className={({ isActive }) => isActive ? 'bg-[#7C884C] border-[#7C884C] text-[#2F341A] glass' : `is-drawer-close:tooltip is-drawer-close:tooltip-right`} data-tip="ICT Store">
                         <FaLaptopHouse className='text-4xl' />
                         <span className="ml-2 is-drawer-close:hidden text-lg font-semibold">ICT Store</span>
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to={"/internet"} className={({ isActive }) => isActive ? 'bg-[#C9E68A] border-[#C9E68A] text-[#2F341A]' : `is-drawer-close:tooltip is-drawer-close:tooltip-right`} data-tip="ICT Internet">
+                    <NavLink to={"/internet"} className={({ isActive }) => isActive ? 'bg-[#7C884C] border-[#7C884C] text-[#2F341A] glass' : `is-drawer-close:tooltip is-drawer-close:tooltip-right`} data-tip="ICT Internet">
                         <LuNetwork className='text-4xl' />
-                        <span className="ml-2 is-drawer-close:hidden text-lg font-semibold">Internet Sec</span>
+                        <span className="ml-2 is-drawer-close:hidden text-lg font-semibold">ICT Internet</span>
                     </NavLink>
                 </li>
 
                 {/* List item 4 */}
                 <li>
-                    <NavLink to={"/software"} className={({ isActive }) => isActive ? 'bg-[#C9E68A] border-[#C9E68A] text-[#2F341A]' : `is-drawer-close:tooltip is-drawer-close:tooltip-right`} data-tip="ICT Software">
+                    <NavLink to={"/software"} className={({ isActive }) => isActive ? 'bg-[#7C884C] border-[#7C884C] text-[#2F341A] glass' : `is-drawer-close:tooltip is-drawer-close:tooltip-right`} data-tip="ICT Software">
                         <GrCloudSoftware className='text-4xl' />
-                        <span className="ml-2 is-drawer-close:hidden text-lg font-semibold">Software Sec</span>
+                        <span className="ml-2 is-drawer-close:hidden text-lg font-semibold">ICT Software</span>
                     </NavLink>
                 </li>
 
@@ -80,7 +80,7 @@ const Menu = () => {
 
                 {/* List item 5 */}
                 <li>
-                    <NavLink to={"/search"} className={({ isActive }) => isActive ? 'bg-[#C9E68A] border-[#C9E68A] text-[#2F341A]' : `is-drawer-close:tooltip is-drawer-close:tooltip-right`} data-tip="Search">
+                    <NavLink to={"/search"} className={({ isActive }) => isActive ? 'bg-[#7C884C] border-[#7C884C] text-[#2F341A] glass' : `is-drawer-close:tooltip is-drawer-close:tooltip-right`} data-tip="Search">
                         <LuSearch className='text-4xl' />
                         <span className="ml-2 is-drawer-close:hidden text-lg font-semibold">Search</span>
                     </NavLink>
@@ -90,7 +90,7 @@ const Menu = () => {
                 {
                     (user) &&
                     <li>
-                        <NavLink to={"/settings"} className={({ isActive }) => isActive ? 'bg-[#C9E68A] border-[#C9E68A] text-[#2F341A]' : `is-drawer-close:tooltip is-drawer-close:tooltip-right`} data-tip="Settings">
+                        <NavLink to={"/settings"} className={({ isActive }) => isActive ? 'bg-[#7C884C] border-[#7C884C] text-[#2F341A] glass' : `is-drawer-close:tooltip is-drawer-close:tooltip-right`} data-tip="Settings">
                             <LuSettings className='text-4xl' />
                             <span className="ml-2 is-drawer-close:hidden text-lg font-semibold">Settings</span>
                         </NavLink>
