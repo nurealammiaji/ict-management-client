@@ -16,6 +16,7 @@
     "localforage": "^1.10.0",
     "match-sorter": "^8.3.0",
     "react": "^19.2.7",
+    "react-data-table-component": "^8.8.0",
     "react-dom": "^19.2.7",
     "react-helmet-async": "^3.0.0",
     "react-hook-form": "^7.81.0",

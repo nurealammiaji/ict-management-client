@@ -14,7 +14,8 @@ const Menu = () => {
 
     const { user } = useContext(AuthContext);
 
-    //   bg-[#C9E68A]
+    // bg-[#C9E68A]
+    // bg-[#A9C86C]
     // bg-[#7C884C]
 
     return (
@@ -24,7 +25,7 @@ const Menu = () => {
                     <img src={logo} className='w-full h-full hidden lg:block' alt="" />
                 </Link>
             </div>
-            <ul className="w-full menu grow *:m-1 *:border *:border-[#ABB083] *:rounded *:text-[#ABB083] *:hover:bg-[#A9C86C] *:hover:border *:hover:text-[#2F341A] *:hover:border-[#ABB083]">
+            <ul className="w-full menu grow *:m-1 *:border-2 *:border-[#ABB083] *:rounded *:text-[#ABB083] *:hover:bg-[#ABB083] *:hover:border-2 *:hover:text-[#2F341A]">
                 <br />
                 {/* List item First */}
                 <li>
@@ -79,12 +80,12 @@ const Menu = () => {
                 <br />
 
                 {/* List item 5 */}
-                <li>
+                {/* <li>
                     <NavLink to={"/search"} className={({ isActive }) => isActive ? 'bg-[#7C884C] border-[#7C884C] text-[#2F341A] glass' : `is-drawer-close:tooltip is-drawer-close:tooltip-right`} data-tip="Search">
                         <LuSearch className='text-4xl' />
                         <span className="ml-2 is-drawer-close:hidden text-lg font-semibold">Search</span>
                     </NavLink>
-                </li>
+                </li> */}
 
                 {/* List item Last */}
                 {

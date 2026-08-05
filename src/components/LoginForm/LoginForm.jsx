@@ -789,8 +789,8 @@ const LoginForm = () => {
                                 </h4>
                                 <p className="text-sm text-green-100 mt-1">
                                     <ul className='list-disc ml-10 list'>
-                                        <li><p>+8801685044055 (Asst. Programmer)</p></li>
-                                        <li><p>+8801674732264 (Programmer)</p></li>
+                                        <li><p>+8801685044055</p></li>
+                                        <li><p>+8801674732264</p></li>
                                     </ul>
                                 </p>
                             </div>

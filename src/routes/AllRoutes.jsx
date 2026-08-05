@@ -5,6 +5,13 @@ import PrivateRoute from "./PrivateRoute";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import Clerk from "../pages/Clerk/Clerk";
+import Agreements from "../pages/Clerk/Agreements/Agreements";
+import Boards from "../pages/Clerk/Boards/Boards";
+import WorkOrders from "../pages/Clerk/WorkOrders/WorkOrders";
+import Letters from "../pages/Clerk/Letters/Letters";
+import ClerkDash from "../pages/Clerk/ClerkDash/ClerkDash";
+import NoteSheets from './../pages/Clerk/NoteSheets/NoteSheets';
+import StaffNotes from './../pages/Clerk/StaffNotes/StaffNotes';
 
 const AllRoutes = createBrowserRouter([
     {
@@ -17,7 +24,37 @@ const AllRoutes = createBrowserRouter([
             },
             {
                 path: "/clerk",
-                element: <Clerk />
+                element: <Clerk />,
+                children: [
+                    {
+                        path: "/clerk",
+                        element: <ClerkDash />
+                    },
+                    {
+                        path: "/clerk/letters",
+                        element: <Letters />
+                    },
+                    {
+                        path: "/clerk/agreements",
+                        element: <Agreements />
+                    },
+                    {
+                        path: "/clerk/boards",
+                        element: <Boards />
+                    },
+                    {
+                        path: "/clerk/work-orders",
+                        element: <WorkOrders />
+                    },
+                    {
+                        path: "/clerk/note-sheets",
+                        element: <NoteSheets />
+                    },
+                    {
+                        path: "/clerk/staff-notes",
+                        element: <StaffNotes />
+                    }
+                ]
             },
             {
                 path: "/ictlab",
